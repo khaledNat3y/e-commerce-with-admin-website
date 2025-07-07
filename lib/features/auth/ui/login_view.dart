@@ -1,6 +1,7 @@
-import 'package:e_commerce_with_admin_website/views/auth/ui/widgets/login_form.dart';
-import 'package:e_commerce_with_admin_website/views/auth/ui/widgets/no_account_text.dart';
-import 'package:e_commerce_with_admin_website/views/auth/ui/widgets/social_card.dart';
+import 'package:e_commerce_with_admin_website/core/helpers/spacing.dart';
+import 'package:e_commerce_with_admin_website/features/auth/ui/widgets/login_form.dart';
+import 'package:e_commerce_with_admin_website/features/auth/ui/widgets/no_account_text.dart';
+import 'package:e_commerce_with_admin_website/features/auth/ui/widgets/social_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -33,13 +34,13 @@ class LoginView extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    "Sign in with your email and password  \nor continue with social media",
+                    "Login in with your email and password  \nor continue with social media",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Color(0xFF757575)),
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                  verticalSpace(MediaQuery.of(context).size.height * 0.05),
                   LoginForm(),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+                  verticalSpace(MediaQuery.of(context).size.height * 0.2),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

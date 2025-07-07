@@ -1,4 +1,4 @@
-import 'package:e_commerce_with_admin_website/views/auth/ui/login_view.dart';
+import 'package:e_commerce_with_admin_website/core/routing/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,15 +10,15 @@ class OurMarket extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: "Our Market",
       theme: ThemeData(
         useMaterial3: true,
-        scaffoldBackgroundColor: Colors.white
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
       ),
-      home: LoginView(),
+      routerConfig: AppRouter.goRouter,
     );
   }
 }
-

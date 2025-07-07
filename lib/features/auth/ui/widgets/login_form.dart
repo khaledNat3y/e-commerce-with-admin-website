@@ -1,7 +1,12 @@
-import 'package:e_commerce_with_admin_website/core/theme/app_colors.dart';
+import 'dart:developer';
+
+import 'package:e_commerce_with_admin_website/core/helpers/spacing.dart';
+import 'package:e_commerce_with_admin_website/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../core/theming/app_colors.dart';
 import '../login_view.dart';
 
 class LoginForm extends StatelessWidget {
@@ -9,12 +14,20 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    GlobalKey<FormState> formKey = GlobalKey<FormState>();
     return Form(
+      key: formKey,
       child: Column(
         children: [
           TextFormField(
             onSaved: (email) {},
             onChanged: (email) {},
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter valid email';
+              }
+              return null;
+            },
             textInputAction: TextInputAction.next,
             decoration: InputDecoration(
                 hintText: "Enter your email",
@@ -39,6 +52,12 @@ class LoginForm extends StatelessWidget {
             child: TextFormField(
               onSaved: (password) {},
               onChanged: (password) {},
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter valid password';
+                }
+                return null;
+              },
               obscureText: true,
               decoration: InputDecoration(
                   hintText: "Enter your password",
@@ -59,9 +78,25 @@ class LoginForm extends StatelessWidget {
                       borderSide: const BorderSide(color: AppColors.kPrimaryColor))),
             ),
           ),
-          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextButton(
+                onPressed: (){
+                  GoRouter.of(context).pushNamed(Routes.forgotPassword);
+                },
+                child: const Text("Forgot Password", style: TextStyle(color: AppColors.kPrimaryColor),),
+              ),
+            ],
+          ),
+          verticalSpace(16),
+
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              if(formKey.currentState!.validate()){
+
+              }
+            },
             style: ElevatedButton.styleFrom(
               elevation: 0,
               backgroundColor: AppColors.kPrimaryColor,

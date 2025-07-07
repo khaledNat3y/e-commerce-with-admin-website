@@ -1,6 +1,8 @@
+import 'package:e_commerce_with_admin_website/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/theme/app_colors.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_colors.dart';
 
 class NoAccountText extends StatelessWidget {
   const NoAccountText({
@@ -18,12 +20,13 @@ class NoAccountText extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            // Handle navigation to Sign Up
+            GoRouter.of(context).pushNamed(Routes.register);
           },
           child: Text(
             "Sign Up",
             style: TextStyle(
               color: AppColors.kPrimaryColor,
+              fontWeight: FontWeightHelper.bold
             ),
           ),
         ),
