@@ -39,7 +39,7 @@ class LoginView extends StatelessWidget {
                     style: TextStyle(color: Color(0xFF757575)),
                   ),
                   verticalSpace(MediaQuery.of(context).size.height * 0.05),
-                  LoginForm(),
+                  const LoginForm(),
                   verticalSpace(MediaQuery.of(context).size.height * 0.2),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

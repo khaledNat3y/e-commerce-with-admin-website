@@ -1,24 +1,11 @@
-import 'package:e_commerce_with_admin_website/core/routing/app_router.dart';
+import 'package:e_commerce_with_admin_website/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'our_market.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const OurMarket());
-}
-
-class OurMarket extends StatelessWidget {
-  const OurMarket({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: "Our Market",
-      theme: ThemeData(
-        useMaterial3: true,
-        scaffoldBackgroundColor: Colors.white,
-        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
-      ),
-      routerConfig: AppRouter.goRouter,
-    );
-  }
 }

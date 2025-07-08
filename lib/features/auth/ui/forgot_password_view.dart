@@ -1,8 +1,6 @@
 import 'package:e_commerce_with_admin_website/features/auth/ui/widgets/no_account_text.dart';
 import 'package:flutter/material.dart';
-// TODO: add flutter_svg package
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../../core/theming/app_colors.dart';
 import 'login_view.dart';
 
