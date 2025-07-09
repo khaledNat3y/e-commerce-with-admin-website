@@ -2,6 +2,9 @@ class Routes {
   static const login = '/login';
   static const register = '/register';
   static const home = '/home';
+  static const store = '/store';
+  static const favorite = '/favorite';
+  static const profile = '/profile';
   static const mainView = '/mainView';
   static const forgotPassword = '/forgot-password';
 }

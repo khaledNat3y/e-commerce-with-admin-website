@@ -1,13 +1,13 @@
 import 'package:e_commerce_with_admin_website/core/routing/routes.dart';
 import 'package:e_commerce_with_admin_website/features/auth/ui/forgot_password_view.dart';
 import 'package:e_commerce_with_admin_website/features/auth/ui/register_view.dart';
-import 'package:e_commerce_with_admin_website/features/main_view/home_view/ui/home_view.dart';
 import 'package:e_commerce_with_admin_website/features/main_view/main_view.dart';
 import 'package:e_commerce_with_admin_website/features/main_view/main_view_logic/nav_bar_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/auth/ui/login_view.dart';
+import '../../features/main_view/screens/home_view/ui/home_view.dart';
 
 
 class AppRouter {

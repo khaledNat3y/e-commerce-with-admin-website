@@ -1,8 +1,8 @@
-import 'package:e_commerce_with_admin_website/features/main_view/favorite_view/ui/favorite_view.dart';
-import 'package:e_commerce_with_admin_website/features/main_view/home_view/ui/home_view.dart';
 import 'package:e_commerce_with_admin_website/features/main_view/main_view_logic/nav_bar_cubit.dart';
-import 'package:e_commerce_with_admin_website/features/main_view/profile_view/ui/profile_view.dart';
-import 'package:e_commerce_with_admin_website/features/main_view/store_view/ui/store_view.dart';
+import 'package:e_commerce_with_admin_website/features/main_view/screens/favorite_view/ui/favorite_view.dart';
+import 'package:e_commerce_with_admin_website/features/main_view/screens/home_view/ui/home_view.dart';
+import 'package:e_commerce_with_admin_website/features/main_view/screens/profile_view/ui/profile_view.dart';
+import 'package:e_commerce_with_admin_website/features/main_view/screens/store_view/ui/store_view.dart';
 import 'package:e_commerce_with_admin_website/features/main_view/widgets/custom_buuton_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
