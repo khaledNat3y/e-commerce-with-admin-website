@@ -1,3 +1,4 @@
+import 'package:e_commerce_with_admin_website/core/helpers/spacing.dart';
 import 'package:e_commerce_with_admin_website/core/theming/app_colors.dart';
 import 'package:e_commerce_with_admin_website/core/widgets/app_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,9 @@ class HomeView extends StatelessWidget {
             ),
           ),
         ),
+        verticalSpace(20),
+        Image.asset("assets/images/buy.jpg",fit: BoxFit.cover,),
+
 
       ],
     );
