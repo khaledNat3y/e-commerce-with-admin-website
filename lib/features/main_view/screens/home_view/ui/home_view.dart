@@ -2,14 +2,18 @@ import 'package:e_commerce_with_admin_website/core/helpers/spacing.dart';
 import 'package:e_commerce_with_admin_website/core/theming/app_colors.dart';
 import 'package:e_commerce_with_admin_website/core/theming/app_theme.dart';
 import 'package:e_commerce_with_admin_website/core/widgets/app_text_form_field.dart';
+import 'package:e_commerce_with_admin_website/features/main_view/screens/home_view/ui/widgets/custom_product_widget.dart';
+import 'package:e_commerce_with_admin_website/features/main_view/screens/home_view/ui/widgets/product_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../data/model/category_model.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const double  padding = 16;
+    const double padding = 16;
 
     return CustomScrollView(
       slivers: [
@@ -19,6 +23,7 @@ class HomeView extends StatelessWidget {
             padding: const EdgeInsets.all(padding),
             child: AppTextFormField(
               hintText: "Search in Market",
+              hintStyle: AppTheme.font20PrimaryBold,
               validator: (value) {},
               suffixIcon: GestureDetector(
                 onTap: () {},
@@ -107,10 +112,20 @@ class HomeView extends StatelessWidget {
             ),
           ),
         ),
+
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: padding),
+            child: Text("Recently Product", style: AppTheme.font20BlackBold),
+          ),
+        ),
+
+        const ProductList(),
       ],
     );
   }
 }
+
 
 List<Category> categories = [
   Category(icon: Icons.sports, title: "Sports"),
@@ -119,10 +134,3 @@ List<Category> categories = [
   Category(icon: Icons.book, title: "Books"),
   Category(icon: Icons.games, title: "Games"),
 ];
-
-class Category {
-  final IconData icon;
-  final String title;
-
-  Category({required this.icon, required this.title});
-}
